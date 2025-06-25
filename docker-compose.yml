@@ -7,4 +7,4 @@ services:
       - STRIPE__WEBHOOK_SECRET=${STRIPE__WEBHOOK_SECRET}
       - WEBHOOK__URL=${WEBHOOK__URL}
     ports:
-      - "${PORT:-3000}:${PORT:-3000}"
+      - "${PORT:-3000}:3000"
