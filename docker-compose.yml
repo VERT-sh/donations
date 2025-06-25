@@ -1,0 +1,10 @@
+services:
+  donations:
+    build: .
+    environment:
+      - PORT=${PORT:-3000}
+      - STRIPE__SECRET_KEY=${STRIPE__SECRET_KEY}
+      - STRIPE__WEBHOOK_SECRET=${STRIPE__WEBHOOK_SECRET}
+      - WEBHOOK__URL=${WEBHOOK__URL}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
