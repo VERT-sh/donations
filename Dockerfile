@@ -24,6 +24,6 @@ RUN apk add --no-cache openssl
 
 WORKDIR /app
 
-COPY --from=builder /app/target/release/service /usr/local/bin/service
+COPY --from=builder /app/target/release/service /service
 
-CMD ["service"]
+CMD ["/service"]
